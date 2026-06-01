@@ -16,7 +16,7 @@ public:
             else if(nums1[i] < nums2[j]){
                 i++;
             }
-            else{
+            else if( nums1[i] > nums2[j]){
                 j++;
             }
             
