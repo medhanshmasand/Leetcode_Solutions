@@ -1,4 +1,4 @@
-class Solution {
+class Solution { //BRUTE FORCE
 public:
     void moveZeroes(vector<int>& nums) {
         vector<int> temp;
