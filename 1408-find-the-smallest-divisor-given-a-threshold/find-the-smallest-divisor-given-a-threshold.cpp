@@ -1,9 +1,7 @@
 class Solution {
 public:
     int smallestDivisor(vector<int>& nums, int threshold) {
-        if(nums.size() == threshold){
-            return *max_element(nums.begin() , nums.end());
-        }
+       
         int low = 1;
         int mid;
         int ans;
@@ -13,7 +11,7 @@ public:
             int total = 0;
             mid = (low+high)/2;
             for(int i = 0; i< nums.size() ; i++){
-                total = total + ceil( (float) nums[i]/mid);
+                total = total + ((nums[i] + mid -1) /mid);
             }
             if(total < threshold || total == threshold){
                 ans = mid;
